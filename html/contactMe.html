@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P-IMDb</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<section class="grid-container">
+    <header>
+        <img src="../img/imdb.png" alt="IMDB" width="150" height="150">
+        <h1>Peter-IMDb</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="allMovies.html">All Movies</a>
+        <a href="rateMovies.html">Rate Movies</a>
+        <a href="contactMe.html">Contact Me</a>
+        <div class="wrapper">
+            <div class="divider div-transparent"></div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="myData"><br></div>
+            <script>
+                fetch("contact.json")
+                .then( function (response) {
+                    return response.json();
+                })
+                .then( function (data) {
+                    appendData(data);
+                })
+                .catch( function (err) {
+                    console.log("error: " + err);
+                });
+                function appendData(data) {
+                    const mainContainer = document.getElementById("myData");
+                    for (var i = 0; i < data.length; i++) {
+                        var div = document.createElement("div");
+                        div.innerHTML = "Name: " + data[i].name + " Number: " + data[i].number + "\n Email: " + data[i].email;
+                        mainContainer.appendChild(div);
+                    }
+                }
+            </script>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="divider div-transparent"></div>
+        </div>
+        <ul class="socials">
+            <li>
+                <a href="https://www.instagram.com/gamestop/?hl=en">
+                    <img src="../img/mail-24px.svg" alt="Mail-Icon" width="25" height="25">
+                    <p>Contact me via email</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/gamestop/?hl=en">
+                    <img src="../img/icon-ig-1.png" alt="IG-Icon" width="25" height="25">
+                    <p>Check out my IG</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</section>
+</body>
+</html>

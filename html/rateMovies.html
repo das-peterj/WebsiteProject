@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P-IMDb</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<section class="grid-container">
+    <header>
+        <img src="../img/imdb.png" alt="IMDB" width="150" height="150">
+        <h1>Peter-IMDb</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="allMovies.html">All Movies</a>
+        <a href="rateMovies.html">Rate Movies</a>
+        <a href="contactMe.html">Contact Me</a>
+        <div class="wrapper">
+            <div class="divider div-transparent"></div>
+        </div>
+    </nav>
+    <main>
+            <article>
+            <form id="formNewRating">
+                <label>Pick The Movie You'd like to rate: </label>
+                    <br><br><label for="txtNewMovie">Pick a movie: </label>
+                    <select name="movie" id="txtNewMovie">
+                        <option value="Tenet">Tenet</option>
+                        <option value="Joker">Joker</option>
+                        <option value="Fight Club">Fight Club</option>
+                        <option value="SW: RotS">SW: RotS</option>
+                    </select>
+                <br><br><label for="txtNewRating">Rate picked movie: </label>
+                <select name="rating" id="txtNewRating">
+                    <option value="1">1⭐</option>
+                    <option value="2">2⭐</option>
+                    <option value="3">3⭐</option>
+                    <option value="4">4⭐</option>
+                    <option value="5">5⭐</option>
+                </select>
+                <input type="submit" value="Save">
+                <p id="formNewOutput"></p>
+            </form>
+        <p><button id="btnShowRatings">Show all ratings</button></p>
+        <p id="formUpdateOutput"></p>
+        </article>
+        <article>
+            <p id="ratingOutput"></p>
+        </article>
+        <script src="../js/rateMovies.js"></script>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="divider div-transparent"></div>
+        </div>
+        <ul class="socials">
+            <li>
+                <a href="https://www.instagram.com/gamestop/?hl=en">
+                    <img src="../img/mail-24px.svg" alt="Mail-Icon" width="25" height="25">
+                    <p>Contact me via email</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/gamestop/?hl=en">
+                    <img src="../img/icon-ig-1.png" alt="IG-Icon" width="25" height="25">
+                    <p>Check out my IG</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</section>
+</body>
+</html>
